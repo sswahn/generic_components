@@ -1,0 +1,22 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+input {
+
+}
+
+h1 {
+ width: 300px;
+}
+
+h1 a img {
+  width: 100%;
+}
+
+nav {
+  
+}

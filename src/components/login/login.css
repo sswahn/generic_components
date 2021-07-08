@@ -11,18 +11,13 @@
   border-radius: 5px;
   left: 50%;
   margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
   padding: 60px 40px 80px 40px;
   position: absolute;
   top: 40%;
   transform: translate(-50%, -50%);
-  width: 500px;
-}
-
-.user-icon {
-  color: var(--main-color);
-  display: block;
-  font-size: 75px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 h2 {

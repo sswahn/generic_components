@@ -40,7 +40,7 @@ export default () => {
               <span>Remember Me</span>
             </label>
             <div>
-              <a href="/forgot-password" className="login-form-link">Forgot Password</a>
+              <a href={config.url.password_reset} className="login-form-link">Forgot Password</a>
             </div>
           </div>
         </form>

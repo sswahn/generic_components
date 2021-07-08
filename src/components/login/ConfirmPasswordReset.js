@@ -1,12 +1,16 @@
+import { useContext } from 'react'
+import { Context } from '../../Provider'
 import config from '../../config'
 import server from '../../utilities/Server'
 import './login.css'
 
 export default () => {
+  const [context, dispatch] = useContext(Context)
+
   const handleSubmit = async event => {
     event.preventDefault()
     if (event.target.elements[2].value !== event.target.elements[3].value) {
-      return alert('Passwords do not match.')
+      return dispatch({ type: 'alert', payload: 'Passwords do not match.' })
     }
     const request = {
       username: event.target.elements[0].value,
@@ -15,9 +19,9 @@ export default () => {
     }
     const response = await server.post(config.api.sign_up, request)
     if (response.error !== undefined) {
-      return alert(response.error.message)
+      return dispatch({ type: 'alert', payload: config.errors.api_response })
     }
-    alert('Success! Check your email confirmation before logging in.')
+    dispatch({ type: 'alert', payload: 'Success! Check your email confirmation before logging in.' })
     window.location.href = config.url.sign_in
   }
 

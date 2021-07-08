@@ -6,6 +6,7 @@ import './login.css'
 
 export default () => {
   const [context, dispatch] = useContext(Context)
+
   const handleSubmit = async event => {
     event.preventDefault()
     if (event.target.elements[2].value !== event.target.elements[3].value) {
@@ -21,6 +22,7 @@ export default () => {
       return dispatch({ type: 'alert', payload: config.errors.api_response })
     }
     dispatch({ type: 'alert', payload: 'Success! Please confirm your email before logging in.' })
+    await new Promise(resolve => setTimeout(resolve, 1500))
     window.location.href = config.url.sign_in
   }
 
