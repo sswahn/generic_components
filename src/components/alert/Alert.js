@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { Context } from '../../Provider'
-import './alert.css'
+import styles from './alert.module.css'
 
 export default () => {
   const [context, dispatch] = useContext(Context)
@@ -17,7 +17,7 @@ export default () => {
   })
 
   return (
-    <div className="alert" style={
+    <div className={styles.alert} style={
       context.alert ? { display: 'block' } : { display: 'none' }
     }>{context.alert}</div>
   )

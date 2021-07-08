@@ -5,18 +5,18 @@
   width: 100%;
 }
 
-input {
+.header input {
 
 }
 
-h1 {
+.header h1 {
  width: 300px;
 }
 
-h1 a img {
+.header h1 a img {
   width: 100%;
 }
 
-nav {
+.header nav {
   
 }

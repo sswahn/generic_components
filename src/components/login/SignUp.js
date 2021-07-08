@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Context } from '../../Provider'
 import config from '../../config'
 import server from '../../utilities/Server'
-import './login.css'
+import styles from './login.module.css'
 
 export default () => {
   const [context, dispatch] = useContext(Context)
@@ -27,15 +27,16 @@ export default () => {
   }
 
   return (
-    <div className="login">
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
+    <div className={styles.login}>
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <h2>Sign Up</h2>
           <input type="text" placeholder="Username"  />
           <input type="email" placeholder="Email"  />
           <input type="password" placeholder="Password"  />
           <input type="password" placeholder="Confirm Password"  />
           {/* recaptcha */}
+          <small>By signing up, you agree to our <a href="">Terms</a>, <a href="">Privacy Policy</a>, and <a href="">Cookie Use</a>.</small>
           <button type="submit">Submit</button>
         </form>
       </div>

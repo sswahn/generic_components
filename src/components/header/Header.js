@@ -1,5 +1,5 @@
 import config from '../../config'
-import './header.css'
+import styles from './header.module.css'
 
 export default () => {
 
@@ -8,7 +8,7 @@ export default () => {
   }
 
   return (
-    <header className="header">
+    <header className={styles.header}>
       <h1>
         <a href={config.url.home} title="Home">
           <img src="" alt="Logo" />

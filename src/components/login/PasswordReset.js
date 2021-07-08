@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Context } from '../../Provider'
 import config from '../../config'
 import server from '../../utilities/Server'
-import './login.css'
+import styles from './login.module.css'
 
 export default () => {
   const [context, dispatch] = useContext(Context)
@@ -20,9 +20,9 @@ export default () => {
   }
 
   return (
-    <div className="login">
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
+    <div className={styles.login}>
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <h2>Reset Password</h2>
           <input type="text" placeholder="Username"  />
           <button type="submit">Submit</button>

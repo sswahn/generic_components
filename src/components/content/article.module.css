@@ -1,0 +1,59 @@
+
+.article {
+  background: white;
+  border-radius: 5px;
+  left: 50%;
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  
+  border: 1px solid black;
+}
+
+.header {
+  display: flex;
+  padding: 10px;
+}
+
+.header img {
+  border: 1px solid gray;
+  height: 50px;
+  margin-right: 10px;
+  width: 50px;
+}
+.header h2 {
+  font-size: 18px;
+}
+
+.main {
+  padding: 0 10px;
+}
+
+.main img {
+  height: 100%;
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.main video {
+  width: 100%;
+}
+
+.footer {
+  border-top: 1px solid black;
+  margin-top: 7px;
+}
+
+.footer button {
+  background: none;
+  border: 0;
+  padding: 10px 20px;
+}
+
+.footer button:hover {
+  background: #ccc;
+}

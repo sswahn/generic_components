@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { Context } from '../../Provider'
 import config from '../../config'
 import server from '../../utilities/Server'
-import './login.css'
+import styles from './login.module.css'
 
 export default () => {
   const [context, dispatch] = useContext(Context)
@@ -27,15 +27,15 @@ export default () => {
   }
 
   return (
-    <div className="login">
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
+    <div className={styles.login}>
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <h2>Sign In</h2>
           <input type="text" placeholder="Username" required />
           <input type="password" placeholder="Password" required />
           <button type="submit">Login</button>
           <div className="login-footer">
-            <label className="remember-me">
+            <label>
               <input type="checkbox" checked={state.checked} onChange={handleCheckbox} />
               <span>Remember Me</span>
             </label>
