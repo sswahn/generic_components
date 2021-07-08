@@ -1,7 +1,7 @@
 
 .article {
   background: white;
-  border-radius: 5px;
+  border-radius: 1px;
   left: 50%;
   margin: 0 auto;
   max-width: 500px;
@@ -16,7 +16,12 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
   padding: 10px;
+}
+
+.header div:first-child {
+  display: flex;
 }
 
 .header img {
@@ -25,12 +30,34 @@
   margin-right: 10px;
   width: 50px;
 }
+
 .header h2 {
   font-size: 18px;
 }
 
+.header time {
+  color: #444;
+  font-size: 14px;
+}
+
+.header button {
+  background: none;
+  border: 0;
+  border-radius: 25px;
+  width: 40px;
+}
+
+.header button:hover {
+  background: #ccc;
+}
+
+.header button span {
+  color: black;
+  font-size: 28px;
+}
+
 .main {
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .main img {
