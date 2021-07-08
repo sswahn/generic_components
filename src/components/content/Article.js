@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './article.module.css'
 
 export default ({ 
@@ -11,6 +12,21 @@ export default ({
   video_src,
   video_id
  }) => {
+  const [state, setState] = useState({
+    show_comments: false
+  })
+
+  const dropdown = event => {
+
+  }
+
+  const comment = event => {
+
+  }
+
+  const share = event => {
+
+  }
 
   return (
     <article className={styles.article}>
@@ -23,7 +39,7 @@ export default ({
           </div>
         </div>
         <div>
-          <button>
+          <button onClick={dropdown}>
             <span>&#8943;</span>
           </button>
         </div>
@@ -34,8 +50,8 @@ export default ({
         {video_src && <video controls="controls" src={video_src} dataYoutubeId={video_id} ></video>}
       </div>
       <footer className={styles.footer}>
-        <button>Comment</button>
-        <button>Share</button>
+        <button onClick={comment}>Comment</button>
+        <button onClick={share}>Share</button>
       </footer>
     </article>
   )
