@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #0070ff;
+  --alt-color: #00308F;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}

@@ -1,0 +1,14 @@
+
+.alert {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #777;
+  box-shadow: 0 5px 10px #999;
+  left: 50%;
+  min-width: 450px;
+  padding: 40px;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
