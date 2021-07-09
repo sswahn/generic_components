@@ -6,7 +6,10 @@ import Login from './components/login/Login'
 import SignUp from './components/login/SignUp'
 import PasswordReset from './components/login/PasswordReset'
 import ConfirmPasswordReset from './components/login/ConfirmPasswordReset'
+
 import Article from './components/content/Article' // remove thus once container is done
+
+import Profile from './components/user/Profile'
 
 export default () => 
   <BrowserRouter>
@@ -25,6 +28,10 @@ export default () =>
       </Route>
       <Route exact path="/article">
         <Article />
+      </Route>
+
+      <Route exact path={config.url.user_profile}>
+        <Profile />
       </Route>
     </Switch>
   </BrowserRouter>

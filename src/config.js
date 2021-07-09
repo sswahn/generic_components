@@ -4,7 +4,8 @@ export default {
     sign_in: '/sign-in',
     sign_up: '/sign-up',
     password_reset: '/reset-password',
-    confirm_password_reset: '/confirm-password'
+    confirm_password_reset: '/confirm-password',
+    user_profile: '/profile/:username' 
   },
   api: {
     sign_in: '',
