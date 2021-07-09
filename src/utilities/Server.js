@@ -1,5 +1,8 @@
 
 const Server = () => {
+  const get = api => {
+    return fetch(api).json()
+  }
   const post = async (api, request) => {
     const response = await fetch(api, {
       method: 'post',
@@ -11,7 +14,7 @@ const Server = () => {
     return response.json()
   }
 
-  return { post }
+  return { get, post }
 }
 
 export default Server()

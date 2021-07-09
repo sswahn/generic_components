@@ -29,7 +29,8 @@ export default () => {
       return dispatch({ type: 'alert', payload: config.errors.api_response })
     }
     const user = getUser()
-    setState({ user, activity: response.message })
+    const activity = response.message
+    setState({ user, activity })
   }
 
   useEffect(() => {
