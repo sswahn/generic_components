@@ -4,6 +4,11 @@ import Router from './Router'
 import Footer from './components/footer/Footer'
 import "./styles.css"
 
+// make header,
+// modal
+// slideshow
+// collapsable side bar (youtubeish)
+
 export default () =>
   <Provider>
     <Alert />

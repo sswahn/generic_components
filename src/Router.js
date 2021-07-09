@@ -14,6 +14,9 @@ import Profile from './components/user/Profile'
 export default () => 
   <BrowserRouter>
     <Switch>
+      <Route exact path={config.url.home}>
+        <Header />
+      </Route>
       <Route exact path={config.url.sign_in}>
         <Login />
       </Route>
