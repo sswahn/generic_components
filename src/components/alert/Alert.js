@@ -16,6 +16,7 @@ export default () => {
     }
   })
 
+  // rewrite this to be a bootstrap-like alert
   return (
     <div className={styles.alert} style={
       context.alert ? { display: 'block' } : { display: 'none' }

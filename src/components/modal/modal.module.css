@@ -6,4 +6,30 @@
   height: 100%;
   position: fixed;
   width: 100%;
+  z-index: 999;
+}
+
+.content {
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  background: none;
+  border: 0;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 38px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 60px;
+  z-index: 99999;
+}
+
+.button:hover {
+  color: white;
 }

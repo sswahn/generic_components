@@ -4,6 +4,7 @@ import Router from './Router'
 import Footer from './components/footer/Footer'
 import "./styles.css"
 
+// alert fix
 // slideshow
 // collapsable sidebar
 

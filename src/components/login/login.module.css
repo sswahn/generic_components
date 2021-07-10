@@ -1,6 +1,6 @@
 
 .login {
-  background: white;
+  background: none;
   height: 100vh;
   position: relative;
   width: 100vw;
@@ -15,7 +15,7 @@
   min-width: 300px;
   padding: 60px 40px 80px 40px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
 }
