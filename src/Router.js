@@ -2,20 +2,18 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import config from './config'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import Splash from './components/splash/Splash'
 import Login from './components/login/Login'
 import SignUp from './components/login/SignUp'
 import PasswordReset from './components/login/PasswordReset'
 import ConfirmPasswordReset from './components/login/ConfirmPasswordReset'
-
-import Article from './components/content/Article' // remove thus once container is done
-
-import Profile from './components/user/Profile'
+import TeacherProfile from './components/teacher/TeacherProfile'
 
 export default () => 
   <BrowserRouter>
     <Switch>
-      <Route exact path={config.url.home}>
-        <Header />
+      <Route exact path={config.url.splash}>
+        <Splash />
       </Route>
       <Route exact path={config.url.sign_in}>
         <Login />
@@ -29,12 +27,10 @@ export default () =>
       <Route exact path={config.url.confirm_password_reset}>
         <ConfirmPasswordReset />
       </Route>
-      <Route exact path="/article">
-        <Article />
-      </Route>
 
-      <Route exact path={config.url.user_profile}>
-        <Profile />
+
+      <Route exact path={config.url.teacher_profile}>
+        <TeacherProfile />
       </Route>
     </Switch>
   </BrowserRouter>

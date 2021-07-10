@@ -3,13 +3,13 @@ import { Context } from '../../Provider'
 import config from '../../config'
 import cookie from '../../utilities/Cookie'
 import server from '../../utilities/Server'
-import styles from './user.module.css'
+import styles from './teacher.module.css'
 
 export default () => {
   const [context, dispatch] = useContext(Context)
   const [state, setState] = useState({ 
     user: undefined, 
-    activity: [] 
+    experience: [] 
   })
 
   const getUser = () => {
@@ -37,6 +37,15 @@ export default () => {
     loadData()
   }, [])
 
+// profile / bio
+// rating
+// video demo lesson
+// experience
+// education
+// written endorsements
+// skills
+// connections 
+
   return (
     <main className={styles.profile}>
       <section>
@@ -46,17 +55,17 @@ export default () => {
           <div id="bio">
             <p>{state.user.bio}</p>
           </div>
-          <div id="social-links">
-            {state.user.social.map(item => 
-              <a href={item.social_url}>{item.type}</a>
-            )}
-          </div>
         </header>
         <div id="activity">
-          {state.activity.length && state.activity.map(item =>
+          {state.experience.length && state.experience.map(item =>
             <article>
-              <div>{item.name}</div>
-              <div>{item.body}</div>
+              <div>
+                {item.img && <div>{item.img}</div>}
+                <div>{item.school}</div>
+              </div>
+              <div>{item.title}</div>
+              <div>{item.rating}</div>
+              <div>{item.description}</div>
             </article>  
           )}
         </div>

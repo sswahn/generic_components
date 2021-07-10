@@ -1,17 +1,15 @@
 import Provider from './Provider'
-import Alert from './components/alert/Alert'
+import Modal from './components/modal/Modal'
 import Router from './Router'
 import Footer from './components/footer/Footer'
 import "./styles.css"
 
-// make header,
-// modal
 // slideshow
-// collapsable side bar (youtubeish)
+// collapsable sidebar
 
 export default () =>
   <Provider>
-    <Alert />
+    <Modal />
     <Router />
     <Footer />
   </Provider>
